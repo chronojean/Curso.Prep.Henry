@@ -1,0 +1,55 @@
+	* Variables
+	* Strings
+	* Funciones (argumentos, `return`)
+	* Declaraciones `if`
+	* Valores booleanos (`true`, `false`)
+Variables.
+En el desarrollo de software necesitaremos guardar en muchas ocasiones algún valor para usarlo luego
+en alguna otra parte del código o proceso.
+Lo hacemos por medio de variables que son, contenedores con nombre, al que puedes llamar para darle ese
+valor que deseas guardar, y para usar ese valor luego, lo haces por medio del nombre que le diste al contenedor.
+Por ejemplo
+var miVariable = "algún valor"
+mi Variable ahora contiene "algún valor" si quiero hacer uso de ello luego, puedo hacerlo usando su nombre.
+console.log(miVariable)
+al hacerlo, en lugar de ver algún texto que diga miVariable, lo que veremos es el valor que este contiene,
+es decir "algún valor".
+
+Strings: 
+Son cadenas de caracteres: a, b, c, d, e, f, g, etc. son caracteres. Una cadena se puede componer de uno o muchos
+caracteres que pueden ser, números, letras, signos de puntuación, otros símbolos ◙♂♀♪♫☼►◄↕‼¶
+
+Funciones:
+Son segmentos de código que por conveniencia se agrupan aparte del código principal y se les asigna un nombre,
+esto con el fin de ser usado varias veces en diferentes partes, esto se hace con la finalidad de simplificar o de
+reutilizar fragmentos de código. Por ejemplo, necesitas específicamente saber si una variable que almacena un string
+esta compuesta por 3 vocales, pero como sabes que vas a necesitar hacer esto en varias ocasiones en diferentes partes
+del código, escribes el proceso aparte, le das un nombre y puedes hacer uso de él en cualquier momento sin estar
+escribiendo el procedimiento completo en cada lugar que lo necesites, solo lo invocas o llamas luego y él hará
+el proceso y te devolverá el valor esperado. Aunque es usual que las funciones tengan nombre, pueden haber también
+funciones anónimas.
+
+Declaraciones "if":
+literalmente en inglés "si", es decir si... se da este caso... haga esto.
+verifica si la expresión dada es verdadera, si lo es, llevará a cabo el código especificado.
+También se acompaña de else if, o de else
+if(esto es verdadero) //entonces hará lo que se diga después entre llaves
+{
+ //esto solo se hará si el if es verdadero
+}
+else if(esto es verdadero) //si el if anterior es falso, entonces, si este nuevo if es verdadero, haga lo indicado.
+{
+ //esto solo se hará si el else if es verdadero.
+}
+else //si ninguna de las comparaciones anteriores es verdadera, entonces haga lo que se indica.
+{
+ //si todo lo anterior es falso, entonces se ejecutará este código.
+}
+
+Valores booleanos "true","false":
+true: indica que una sentencia es verdadera, por ejemplo 1 == 1 (uno es igual a uno)
+false: indica que una sentencia es falsa, por ejemplo 1 != 1 (uno es diferente de uno)
+
+al realizar una comparación ésta retornará true o false, dependiendo de si es cierta o no una expresión.
+también se puede usar true o false como valores, por ejemplo: if(true). El 1 y el 0, también se pueden usar
+para indicar verdadero o falso.
