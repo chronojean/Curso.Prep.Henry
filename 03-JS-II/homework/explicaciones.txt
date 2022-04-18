@@ -1,0 +1,46 @@
+`for`
+* `&&`, `||`, `!`
+
+For:
+Es un ciclo, repite un procedimiento la cantidad de veces que se indica. Recibe 3 expresiones:
+-una variable inicializada en algún valor.
+-una condición, indicando que el for se realizará siempre y cuando esta condición se cumpla
+al inicio de cada ciclo.
+-un incremento de la variable inicializada, esta expresión ocurrirá al finalizar el bloque de
+código
+for(var i=1;i<10;i++)
+{
+    //bloque de código con el procedimiento deseado.
+}
+al final de cada paso, iteración o ciclo, i aumentará su valor en 1, el for entonces intentará
+iniciar de nuevo el ciclo usando el nuevo valor de i, solo si se cumple la condición.
+
+&&:
+se usa al realizar comparaciones, por ejemplo, dentro de un for, o un if, else if, etc. con el
+fin de tomar en cuenta varias condiciones, por ejemplo, realizar la suma solo si ambos valores
+son positivos:
+num1 = 7;
+num2 = 8
+if(num1 > 0 && num2 > 0 && ...) // si ambos son mayores a 0
+{
+    //sume ambos valores.
+}
+en este caso si alguno de los valores, num1, o num2 fuese falso, la condición entonces sería falsa
+||:
+se usa al realizar comparaciones, por ejemplo, dentro de un for, o un if, else if, etc. con el
+fin de tomar en cuenta varias condiciones, por ejemplo, realizar la suma si al menos uno de los
+valores es positivo:
+num1 = -1
+num2 = 100
+if(num1 > 0 || num2 > 0 || ...) // si num1, es negativo, no se cumplirá esa condición, pero procederá a ver si alguna de las siguientes es verdadera. Procederá si lo es.
+{
+    //sume ambos valores.
+}
+
+!:
+Not, negación. Transforma cualquier valor booleano en su opuesto. Si la expresión retorna verdadero,
+entonces convertirá el valor retornado en falso y viceversa:
+!true ( retornará false)
+!false (retornará true)
+!1 (1 se considera true, pero al agregar not se verá el valor false)
+!0 (0 se considera false, pero al agregar not se verá el valor true)
