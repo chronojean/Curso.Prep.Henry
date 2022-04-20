@@ -128,6 +128,14 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  var array = Array.prototype.slice.call(arguments);
+  var multiplicar;
+  if (array.length === 0) return 0;
+  multiplicar = array.pop();
+  while (array.length > 0) {
+    multiplicar = multiplicar * array.pop();
+  }
+  return multiplicar;
 }
 
 function cuentoElementos(arreglo) {
@@ -196,12 +204,11 @@ function mesesDelAño(array) {
     array.includes("Marzo") &&
     array.includes("Noviembre")
   ) {
-    /*while (array.length > 0) {
-      temp = array.shift;
-      console.log(array.length);
-      if (temp === "Enero" || temp === "Marzo" || temp === "Noviembre")
+    while (array.length > 0) {
+      temp = array.shift();
+      if (temp == "Enero" || temp == "Marzo" || temp == "Noviembre")
         nuevoArray.push(temp);
-    }*/
+    }
     return nuevoArray;
   }
   return "No se encontraron los meses pedidos";
@@ -211,6 +218,13 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  var nuevoArray = [];
+  var temp;
+  while (array.length > 0) {
+    temp = array.shift();
+    if (temp > 100) nuevoArray.push(temp);
+  }
+  return nuevoArray;
 }
 
 function breakStatement(numero) {
@@ -221,6 +235,14 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  var nuevoArray = [];
+  for (var i = 0; i < 10; i++) {
+    numero = numero + 2;
+    if (numero === i) break;
+    nuevoArray.push(numero);
+  }
+  if (i < 10) return "Se interrumpió la ejecución";
+  return nuevoArray;
 }
 
 function continueStatement(numero) {
@@ -230,6 +252,13 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  var nuevoArray = [];
+  for (var i = 0; i < 10; i++) {
+    if (i === 4) continue;
+    numero = numero + 2;
+    nuevoArray.push(numero);
+  }
+  return nuevoArray;
 }
 
 // No modificar nada debajo de esta línea
