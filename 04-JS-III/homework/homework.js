@@ -157,19 +157,31 @@ function diaDeLaSemana(numeroDeDia) {
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario.
   //Escribe tu código aquí
   if (numeroDeDia == 1 || numeroDeDia == 7) return "Es fin de semana";
-  else if (numeroDeDia > 1 && numero < 7) return "Es dia Laboral";
+  else if (numeroDeDia > 1 && numeroDeDia < 7) return "Es dia Laboral";
+  else return "ingrese un número de la semana (1-7)";
 }
 
 function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
+  n = n + "";
+  if (n.startsWith("9")) return true;
+  return false;
 }
 
 function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí
+  var aux;
+  while (arreglo.length > 1) {
+    aux = arreglo.pop();
+    if (aux !== arreglo[arreglo.length - 1]) {
+      return false;
+    }
+  }
+  return true;
 }
 
 function mesesDelAño(array) {
@@ -177,6 +189,22 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  var nuevoArray = [];
+  var temp;
+  if (
+    array.includes("Enero") &&
+    array.includes("Marzo") &&
+    array.includes("Noviembre")
+  ) {
+    /*while (array.length > 0) {
+      temp = array.shift;
+      console.log(array.length);
+      if (temp === "Enero" || temp === "Marzo" || temp === "Noviembre")
+        nuevoArray.push(temp);
+    }*/
+    return nuevoArray;
+  }
+  return "No se encontraron los meses pedidos";
 }
 
 function mayorACien(array) {
