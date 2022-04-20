@@ -1,0 +1,17 @@
+Arrays:
+Al igual que las variables donde puedes guardar valores, para usarlos más tarde,
+los arreglos también lo hace, pero la diferencia es que los arreglos pueden
+guardar varios valores mientras que una variable ordinaria solo puede guardar uno a la vez.
+
+Si las variables son cajones, donde guardamos algo, los arrays son como estantes que a su vez
+contienen varios cajones. Puede guardar tantos valores como desees. Incluso puede haber un
+arreglo, dentro de otro arreglo, de modo que sería algo así:
+
+arreglo= [1,2,3,4,5,6] // este arreglo contiene 6 cajones, o 6 valores.
+matriz =                //este arreglo "matriz" contiene 3 arreglos, estos a su vez contienen varios valores que pueden ser de cualquier tipo, también contiene un valor (que no es arreglo)
+[
+    [1,2,3,4,5,6],
+    ["hola","mi","nombre","es","anónimo"],
+    [true, 1.55, "sábado", null, undefined, 0, "patata"],
+    5
+]
