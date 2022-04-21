@@ -175,14 +175,8 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí
-  var aux;
-  while (arreglo.length > 1) {
-    aux = arreglo.pop();
-    if (aux !== arreglo[arreglo.length - 1]) {
-      return false;
-    }
-  }
-  return true;
+  const figuales = (arr) => arr.every((elemento) => elemento === arr[0]);
+  return figuales(arreglo);
 }
 
 function mesesDelAño(array) {
