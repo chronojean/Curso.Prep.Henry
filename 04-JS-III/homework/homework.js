@@ -128,9 +128,10 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  if (arguments.length === 0) return 0;
+  if (arguments.length === 1) return arguments[0];
   var array = Array.prototype.slice.call(arguments);
   var multiplicar;
-  if (array.length === 0) return 0;
   multiplicar = array.pop();
   while (array.length > 0) {
     multiplicar = multiplicar * array.pop();
@@ -141,18 +142,10 @@ function multiplicarArgumentos() {
 function cuentoElementos(arreglo) {
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-  var mayores = 0;
+  var mayores = [];
   if (isNaN(arreglo) && typeof arreglo !== "string") {
-    for (i = 0; i < arreglo.length; i++) {
-      if (arreglo[i].length > 0) {
-        for (j = 0; j < arreglo[i].length; j++) {
-          if (arreglo[i][j] > 18) mayores++;
-        }
-      } else {
-        if (arreglo[i] > 18) mayores++;
-      }
-    }
-    return mayores;
+    mayores = arreglo.filter((mayor) => mayor > 18);
+    return mayores.length;
   } else {
     console.log("El argumento no es un array numérico");
     return arreglo;
@@ -204,11 +197,9 @@ function mesesDelAño(array) {
     array.includes("Marzo") &&
     array.includes("Noviembre")
   ) {
-    while (array.length > 0) {
-      temp = array.shift();
-      if (temp == "Enero" || temp == "Marzo" || temp == "Noviembre")
-        nuevoArray.push(temp);
-    }
+    nuevoArray = array.filter(
+      (mes) => mes === "Enero" || mes === "Marzo" || mes === "Noviembre"
+    );
     return nuevoArray;
   }
   return "No se encontraron los meses pedidos";
@@ -219,11 +210,7 @@ function mayorACien(array) {
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
   var nuevoArray = [];
-  var temp;
-  while (array.length > 0) {
-    temp = array.shift();
-    if (temp > 100) nuevoArray.push(temp);
-  }
+  nuevoArray = array.filter((num) => num > 100);
   return nuevoArray;
 }
 
