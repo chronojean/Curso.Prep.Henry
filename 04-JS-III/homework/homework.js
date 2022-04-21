@@ -167,8 +167,7 @@ function empiezaConNueve(n) {
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
   n = n + "";
-  if (n.startsWith("9")) return true;
-  return false;
+  return n.startsWith("9");
 }
 
 function todosIguales(arreglo) {
