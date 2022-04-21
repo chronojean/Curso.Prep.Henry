@@ -51,9 +51,7 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  var salida = palabras[0];
-  for (var i = 1; i < palabras.length; i++) salida = salida + " " + palabras[i];
-  return salida;
+  return palabras.join(" ");
 }
 
 function arrayContiene(array, elemento) {
