@@ -124,8 +124,7 @@ function multiplicarArgumentos() {
   if (arguments.length === 0) return 0;
   if (arguments.length === 1) return arguments[0];
   var array = Array.prototype.slice.call(arguments);
-  var multiplicar;
-  multiplicar = array.pop();
+  var multiplicar = array.pop();
   while (array.length > 0) {
     multiplicar = multiplicar * array.pop();
   }
