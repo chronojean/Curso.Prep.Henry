@@ -66,7 +66,6 @@ function agregarNumeros(numeros) {
   // Suma todos los enteros y devuelve el valor
   // Tu código:
   var sum = 0;
-  var num = 0;
   numeros.forEach((elemento) => (sum = sum + elemento));
   return sum;
 }
