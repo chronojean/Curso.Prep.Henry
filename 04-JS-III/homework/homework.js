@@ -67,11 +67,7 @@ function agregarNumeros(numeros) {
   // Tu código:
   var sum = 0;
   var num = 0;
-  while (numeros.length > 0) {
-    num = numeros.pop();
-    if (num % 1 !== 0) return false;
-    sum = sum + num;
-  }
+  numeros.forEach((elemento) => (sum = sum + elemento));
   return sum;
 }
 
