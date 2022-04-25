@@ -1,0 +1,61 @@
+    Objetos:
+
+    Son como los arreglos en javascript, solo que con una estructura definida.
+        Propiedades:
+                    A los elementos que contienen (que también están definidos por nombre)
+                se les llama propiedades.
+        Métodos:
+                    Es el nombre que se le da a las funciones de objeto.
+
+    Mientras que un arreglo tiene la forma:
+
+    array = [1,"patata",null,0,undefined]
+    y para acceder a ello accedes a través de los índices.
+    array[0]; // retorna 1
+    array[1]; // retorna "patata"
+    array[2]; // retorna null
+    array[3]; // retorna 0
+    array[4]; // retorna undefined
+
+    un objeto tiene la forma:
+
+    objeto = {
+        valor: 1,
+        cadena: "patata",
+        propiedad_nula: null,
+        propiedad_cero: 0,
+        propiedad_indefinida: undefined,
+        miFuncion: function (){return "hola " + this.cadena;},
+        arreglo: [1,2,3,4,5,6,[9,8,7]],
+    }
+    Notación de puntos vs notación de corchetes:
+    y para acceder a sus propiedades y métodos puedes hacerlo de varias maneras, brackets notation (lo puedes tratar como un array), dot notation (accedes a él por medio del punto).
+
+    objeto["valor"] //retorna 1;
+    objeto.valor    //retorna 1;
+
+    objeto["miFuncion"]()   //retorna "hola patata";
+    objeto.miFuncion()      //retorna "hola patata";
+
+    objeto["arreglo"]   //retorna el array [1,2,3,4,5,6,[9,8,7]]
+    objeto.arreglo      //retorna el array [1,2,3,4,5,6,[9,8,7]]
+
+    objeto["arreglo"][6]        //retorna el subarray [9,8,7]
+    objeto.arreglo[6]           //retorna el subarray [9,8,7]
+
+	Bucle For (let variable_clave in objeto):
+                                            para recorrer los objetos (propiedades y métodos) se usa este for, funciona de manera semejante a recorrer un array
+                                            solo que con cada propiedad y metodo del objeto de modo que si tenemos a "objeto" que definimos previamente y ejecutamos
+                                            el código.
+
+                                            for(let clave in objeto){
+                                               console.log(clave + ": " + objeto[clave]);
+                                            }
+                                            se recorrerá el objeto mostrando por cónsola cada clave/propiedad y su valor. la salida sería:
+                                            valor: 1
+                                            cadena: patata
+                                            propiedad_nula: null
+                                            propiedad_cero: 0
+                                            propiedad_indefinida: undefined
+                                            miFuncion: function (){return "hola " + this.cadena;}
+                                            arreglo: 1,2,3,4,5,6,9,8,7
