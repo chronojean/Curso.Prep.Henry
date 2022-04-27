@@ -1,0 +1,16 @@
+ prototype:
+    Es decirle al intérprete que cree un objeto basándose en el objeto dado, por ejemplo, ya tenemos un objeto
+    var objeto = {a: "1", b: 2,}
+
+    y le decimos al intérprete que cree un nuevo objeto con el Object.create(), de este modo nuestra variable objeto
+    se convierte en el prototipo que dará origen a un nuevo objeto, la función Object.create retornará un objeto nuevo basado en el que le
+    pasemos por parámetro.
+    quedando así que.
+
+    var objetoDos = Object.create(objeto);
+
+    objetoDos // Es un objeto nuevo que también posee {a: "1", b: 2,}. En otras palabras se hizo basado en un prototipo. en este caso "objeto".
+
+_Constructors_ (de Clases):
+        Es una método/función que se usa para inicializar un objeto. el método "Object.create" crea un nuevo objeto, lo inicializa en un constructor usando como prototipo el
+        objeto pasado por argumento.
