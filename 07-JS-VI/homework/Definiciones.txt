@@ -1,0 +1,19 @@
+Funciones Callback:
+
+Son funciones que se pasan por parámetro, por ejemplo, para funcion hola:
+function hola(texto){
+    return "Contenido del argumento: " +texto;
+}
+al invocarla le enviamos una cadena de texto como parámetro. Podemos hacer lo mismo con una funcion.
+
+//el callback recibe como parametro una cadena de texto
+function texto (texto,cb){
+    console.log(cb(texto))
+}
+
+si queremos invocar a texto, debemos enviarle los parámetros que indique en su descripción
+quedando de este modo
+
+texto("Jean Pierre Michel",hola); //"Contenido del argumento: Jean Pierre Michel"
+de este modo la función texto, recibe un string y una funcion, a su vez, ella realiza la llamada a la funcion callback (cb) enviandole el parámetro requerido.
+La función hola se ejecuta.
