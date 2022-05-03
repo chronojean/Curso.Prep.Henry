@@ -2,29 +2,46 @@
 <html>
   <head>
     <title>Tarea HTML de Jean Pierre Michel Andrade Nieto</title>
+    <style>
+      h1 {
+        color: orange;
+      }
+      img {
+        width: 400px;
+      }
+      #spanId {
+        font-size: 18px;
+        margin: 50px;
+      }
+      #thirdDiv {
+        height: 600px;
+        width: 500px;
+        background-color: aliceblue;
+        padding: 50px;
+        border: 2px dotted;
+      }
+    </style>
   </head>
   <body>
-    <div>
+    <div class="divClass">
       <h1>Jean Pierre Michel Andrade Nieto</h1>
       <h3>Henry</h3>
       <h4>tarea de HTML / CSS</h4>
     </div>
     <div>
-      <span>
+      <span class="divClass" id="spanId">
         Mi comida favorita es la pizza, casi siempre, sobretodo con mucho queso,
         buena masa y sabrosa salsa.
         <a href="https://example.com"> https://example.com </a>
       </span>
     </div>
-    <div>
+    <div id="thirdDiv">
       <ul>
         <li>
           Salami
           <img
             src="https://cdn2.salud180.com/sites/default/files/field/image/2020/10/de-que-esta-hecho-salami-principal.jpg"
             alt="Salami"
-            width="350"
-            height="200"
           />
         </li>
         <li>
@@ -32,8 +49,6 @@
           <img
             src="https://www.soycocinillas.es/wp-content/uploads/2020/06/spicy-italian-pizza-155153745-580e71cf5f9b58564cd273f6-960x641.jpg"
             alt="Chorizo en Pizza"
-            width="400"
-            height="200"
           />
         </li>
       </ul>
