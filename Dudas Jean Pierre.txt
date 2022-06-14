@@ -1,4 +1,5 @@
 practicar:
 
+
 Practicar reduce hasta entenderlo. Prefiero usar foreach.
 Practicar reduce right hasta entenderlo. Prefiero usar foreach
